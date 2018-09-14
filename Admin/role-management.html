@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Role Management | Spring Board</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg-light">
+<div id="navbar"></div>
+<aside data-sidebar>
+    <div class="padding-bottom-md container-fluid">
+        <div class="row">
+            <div class="col-xs-12 bg-dark">
+                <div class="padding-md">
+                    <div class="panel-close-btn" data-sidebar-button><i class="fa fa-times fa-lg text-white"></i></div>
+                    <h3 class="margin-0">Role Management</h3>
+                </div>
+            </div>
+            <div class="col-xs-12 margin-top-lg">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="name" class="padding-top-md">Role Name</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="name" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="description" class="padding-top-md">Description</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="description" class="form-control" placeholder="Description">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <h4>Access Level</h4>
+                    <div class="well well-sm">
+                        <h5>Onboarding Management</h5>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="panel panel-default joinee-blocks">
+                                    <div class="panel-body">
+                                        <strong>
+                                            <label><input type="checkbox" class="checkbox_all" onchange="roleManagement.roleManagementCheckbox(this)"> Manage</label>
+                                        </strong>
+                                        <div class="padding-left-lg">
+                                            <div><label><input type="checkbox" class="checkbox_add_edit"> Add / Edit</label></div>
+                                            <div><label><input type="checkbox" class="checkbox_view"> View</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-default joinee-blocks">
+                                    <div class="panel-body">
+                                        <strong>
+                                            <label><input type="checkbox" class="checkbox_all" onchange="roleManagement.roleManagementCheckbox(this)"> Create Joinee</label>
+                                        </strong>
+                                        <div class="padding-left-lg">
+                                            <div><label><input type="checkbox" class="checkbox_add_edit"> Add / Edit</label></div>
+                                            <div><label><input type="checkbox" class="checkbox_view"> View</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-default joinee-blocks">
+                                    <div class="panel-body">
+                                        <strong>
+                                            <label><input type="checkbox" class="checkbox_all" onchange="roleManagement.roleManagementCheckbox(this)"> Logistics Management</label>
+                                        </strong>
+                                        <div class="padding-left-lg">
+                                            <div><label><input type="checkbox" class="checkbox_add_edit"> Add / Edit</label></div>
+                                            <div><label><input type="checkbox" class="checkbox_view"> View</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-default joinee-blocks">
+                                    <div class="panel-body">
+                                        <strong>
+                                            <label><input type="checkbox" class="checkbox_all" onchange="roleManagement.roleManagementCheckbox(this)"> Confirmation</label>
+                                        </strong>
+                                        <div class="padding-left-lg">
+                                            <div><label><input type="checkbox" class="checkbox_add_edit"> Add / Edit</label></div>
+                                            <div><label><input type="checkbox" class="checkbox_view"> View</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-default joinee-blocks">
+                                    <div class="panel-body">
+                                        <strong>
+                                            <label><input type="checkbox" class="checkbox_all" onchange="roleManagement.roleManagementCheckbox(this)"> BHR 45 Day Feedback</label>
+                                        </strong>
+                                        <div class="padding-left-lg">
+                                            <div><label><input type="checkbox" class="checkbox_add_edit"> Add / Edit</label></div>
+                                            <div><label><input type="checkbox" class="checkbox_view"> View</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>Interval Feedback</h5>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="panel panel-default joinee-blocks">
+                                    <div class="panel-body">
+                                        <strong>
+                                            <label><input type="checkbox" class="checkbox_all" onchange="roleManagement.roleManagementCheckbox(this)"> Supervisor Monthly Feedback</label>
+                                        </strong>
+                                        <div class="padding-left-lg">
+                                            <div><label><input type="checkbox" class="checkbox_add_edit"> Add / Edit</label></div>
+                                            <div><label><input type="checkbox" class="checkbox_view"> View</label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="well well-sm">
+                        <h5>Roadmap</h5>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="panel panel-default joinee-blocks">
+                                    <div class="panel-body">
+                                        <div><label><input type="checkbox" class="checkbox_add_edit"> Arrange</label></div>
+                                        <div><label><input type="checkbox" class="checkbox_view"> Recommend</label></div>
+                                        <div><label><input type="checkbox" class="checkbox_view"> Comment</label></div>
+                                        <div><label><input type="checkbox" class="checkbox_view"> Add / Edit</label></div>
+                                        <div><label><input type="checkbox" class="checkbox_view"> View</label></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <button class="btn btn-danger padding-left-xl padding-right-xl">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</aside>
+<div class="overlay" data-sidebar-overlay></div>
+
+<div class="container-fluid container-padding-top">
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-danger btn-sm" data-sidebar-button><i class="fa fa-plus"></i> Add</button>
+        </div>
+        <div class="col-md-4 text-center">
+            <h4 class="margin-0 padding-top-xs">Role Management</h4>
+        </div>
+        <div class="col-xs-12 margin-top-lg overflow-scroll">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th><div data-toggle="tooltip" data-placement="bottom" data-original-title="Name of the Role" class="red-tooltip">Name</div></th>
+                    <th><div data-toggle="tooltip" data-placement="bottom" data-original-title="Access for Onboarding Management" class="red-tooltip">Onboarding Management</div></th>
+                    <th><div data-toggle="tooltip" data-placement="bottom" data-original-title="Access for Interval Feedback" class="red-tooltip">Interval Feedback</div></th>
+                    <th><div data-toggle="tooltip" data-placement="bottom" data-original-title="Access for Roadmap" class="red-tooltip">Roadmap</div></th>
+                    <th><div data-toggle="tooltip" data-placement="bottom" data-original-title="Action" class="red-tooltip">Action</div></th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Admin</td>
+                        <td>
+                            <div>
+                                <p class="margin-0"><strong>Manage</strong>: Add, Edit</p>
+                                <p class="margin-0"><strong>Joinee</strong>: View, Add, Edit</p>
+                                <p class="margin-0"><strong>Logistics</strong>: View, Add, Edit</p>
+                                <p class="margin-0"><strong>Confirmation</strong>: View, Add, Edit</p>
+                                <p class="margin-0"><strong>BHR 45 Day</strong>: Add, Edit</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p class="margin-0"><strong>Supervisor Monthly Feedback</strong>: Add, Edit</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p class="margin-0"><strong>Roadmap</strong>: Add, Edit</p>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" data-sidebar-button><i class="fa fa-pencil"></i> Edit</button>
+                            <button class="btn btn-primary btn-sm"><i class="fa fa-trash-o"></i> Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Supervisor</td>
+                        <td>
+                            <div>
+                                <p class="margin-0"><strong>Manage</strong>: Add, Edit</p>
+                                <p class="margin-0"><strong>Joinee</strong>: View, Add, Edit</p>
+                                <p class="margin-0"><strong>Logistics</strong>: View, Add, Edit</p>
+                                <p class="margin-0"><strong>Confirmation</strong>: View, Add, Edit</p>
+                                <p class="margin-0"><strong>BHR 45 Day</strong>: Add, Edit</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p class="margin-0"><strong>Supervisor Monthly Feedback</strong>: Add, Edit</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p class="margin-0"><strong>Roadmap</strong>: Add, Edit</p>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" data-sidebar-button><i class="fa fa-pencil"></i> Edit</button>
+                            <button class="btn btn-primary btn-sm"><i class="fa fa-trash-o"></i> Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SPOC</td>
+                        <td>
+                            <div>
+                                <p class="margin-0"><strong>Manage</strong>: Add, Edit</p>
+                                <p class="margin-0"><strong>Joinee</strong>: View, Add, Edit</p>
+                                <p class="margin-0"><strong>Logistics</strong>: View, Add, Edit</p>
+                                <p class="margin-0"><strong>Confirmation</strong>: View, Add, Edit</p>
+                                <p class="margin-0"><strong>BHR 45 Day</strong>: Add, Edit</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p class="margin-0"><strong>Supervisor Monthly Feedback</strong>: Add, Edit</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p class="margin-0"><strong>Roadmap</strong>: Add, Edit</p>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" data-sidebar-button><i class="fa fa-pencil"></i> Edit</button>
+                            <button class="btn btn-primary btn-sm"><i class="fa fa-trash-o"></i> Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-white container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="images/springboard-logo.png">
+        </div>
+    </div>
+</footer>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/role-management.js"></script>
+<script src="js/sidebar.js"></script>
+<script>
+    $('[data-toggle="tooltip"]').tooltip()
+</script>
+</body>
+</html>

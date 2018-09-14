@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Spring Board</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="h-100 login-wrapper">
+<div class="container-fluid h-100">
+    <div class="row h-100 login-bg-image">
+        <div class="col-md-8 hidden-sm hidden-xs">
+
+        </div>
+        <div class="col-md-4 bg-white h-100">
+            <div class="container-fluid">
+                <div class="client-logo text-center padding-lg">
+                    <img src="images/company-image.png" alt="client logo">
+                </div>
+                <div class="nav-center">
+                    <ul class="nav nav-pills text-center padding-top-lg">
+                        <li class="active"><a data-toggle="pill" href="#signIn">Sign In</a></li>
+                        <li><a data-toggle="pill" href="#signUp">Request Access</a></li>
+                    </ul>
+                </div>
+
+                <div class="tab-content padding-top-lg">
+                    <div id="signIn" class="tab-pane fade in active">
+                        <form id="login_form">
+                            <div class="form-group margin-top-lg">
+                                <label class="hidden" for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label class="hidden" for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                            </div>
+                            <div class="form-group margin-top-lg">
+                                <a href="dashboard.html" class="btn btn-danger btn-lg btn-block">Enter</a>
+                            </div>
+                            <div class="text-center">
+                                <a href="forgot-password.html"><small class="text-muted">Forgot Password?</small></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="signUp" class="tab-pane fade">
+                        <form id="signup_form">
+                            <div class="form-group margin-top-lg">
+                                <label class="hidden" for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group margin-top-lg">
+                                <button class="btn btn-danger btn-lg btn-block">Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="margin-top-xl padding-top-xl client-logo text-center">
+                    <img src="images/springboard-logo.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

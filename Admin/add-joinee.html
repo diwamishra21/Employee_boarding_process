@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Joinee | Spring Board</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg-light">
+
+<div id="navbar"></div>
+
+<div class="container-fluid container-padding-top">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 bg-white margin-bottom-xl">
+            <div class="padding-md">
+                <div class="text-center">
+                    <h3>Add Joinee</h3>
+                </div>
+                <div class="row margin-top-xl">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="search" placeholder="Search Emp ID">
+                                <span class="input-group-btn">
+                                      <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+                                  </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <form id="employee_joining">
+                    <div class="row margin-top-lg">
+                        <div class="col-sm-4 col-sm-push-8">
+                            <div class="profile-image">
+                                <img src="http://via.placeholder.com/200x200" alt="profile">
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-sm-pull-4">
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="name" class="padding-top-md">Name</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="name" class="form-control" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="doj" class="padding-top-md">DOJ</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="doj" class="form-control" placeholder="Date of Joining">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="emp_id" class="padding-top-md">Employee ID</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="emp_id" class="form-control" placeholder="Employee ID">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="emp_email" class="padding-top-md">Employee Email</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="emp_email" class="form-control" placeholder="Employee Email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="business" class="padding-top-md">Business</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="business" class="form-control" placeholder="Business">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="location" class="padding-top-md">Location</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="location" class="form-control" placeholder="Location">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="dept" class="padding-top-md">Department</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="dept" class="form-control" placeholder="Department">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="sub_dept" class="padding-top-md">Sub Department</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="sub_dept" class="form-control" placeholder="Sub Department">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="level" class="padding-top-md">Level</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <select class="form-control" id="level">
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="designation" class="padding-top-md">Designation</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="designation" class="form-control" placeholder="Designation">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="supervisor" class="padding-top-md">Supervisor</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="supervisor" class="form-control" placeholder="Supervisor">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="spoc" class="padding-top-md">SPOC</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="spoc" class="form-control" placeholder="SPOC">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="business_hr" class="padding-top-md">Business HR</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="business_hr" class="form-control" placeholder="Business HR">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 padding-bottom-lg text-center margin-top-lg">
+                        <button type="reset" class="btn btn-primary padding-left-lg padding-right-lg">Reset</button>
+                        <button type="submit" class="btn btn-danger padding-left-lg padding-right-lg">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-white container-fluid">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="images/springboard-logo.png">
+        </div>
+    </div>
+</footer>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./js/jquery-1.12.4.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
